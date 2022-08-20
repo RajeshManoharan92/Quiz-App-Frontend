@@ -51,7 +51,7 @@ export function Adminlogin() {
 
         })
 
-        if (response.data === "Loggedin") {
+        if (response) {
             auth.login(user)
             alert("Admin - Verification Success")
             Navigate('/admin', { replace: true })

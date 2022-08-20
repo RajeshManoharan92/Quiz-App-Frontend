@@ -5,6 +5,7 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import { useAuth } from "../auth"
 
 
 // Function used for Dashboard Page
@@ -15,6 +16,8 @@ export function Dashboard() {
     // to store datas array used
 
     const [array, setarray] = useState([])
+
+    const [user, setuser] = useState([])
 
     // to store cartvalue  
 
@@ -40,6 +43,18 @@ export function Dashboard() {
     // using useEffect to get data on page load
 
     useEffect(() => {
+        username()
+    }, []);
+
+    const username = async () => {
+        var response = await axios.post('http://localhost:3002/getuser',{
+            email:auth.user
+        })
+        setuser(response.data.first_name)
+    }
+
+
+    useEffect(() => {
         data()
     }, []);
 
@@ -47,6 +62,9 @@ export function Dashboard() {
         var response = await axios.get('http://localhost:3002/getQuestion')
         setarray(response.data)
     }
+
+var auth = useAuth()
+
 
     var timer;
 
@@ -125,7 +143,7 @@ export function Dashboard() {
                                         <Toolbar style={{ minHeight: "100px" }} className="color">
                                             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} >
                                                 <div className="fontstyle1">
-                                                    Welcome User<br></br>
+                                                    Welcome {user} <br></br>
                                                 </div>
                                                 <div className="fontstyle2">
                                                     Check Your Knowledge here...
@@ -229,7 +247,7 @@ export function Dashboard() {
                                             <Toolbar style={{ minHeight: "100px" }} className="color">
                                                 <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} >
                                                     <div className="fontstyle1">
-                                                        Congrats User...
+                                                        Congrats {user}...
                                                     </div>
                                                 </Typography>
                                             </Toolbar>

@@ -23,6 +23,7 @@ export function Userlogin() {
     // function for protected routed
 
     const [user, setUser] = useState("")
+    const [username, setusername] = useState("")
     const auth = useAuth()
 
     // useEffect used to clear history to avoid browser back button
@@ -51,7 +52,10 @@ export function Userlogin() {
 
         })
 
-        if (response.data === "Loggedin") {
+        setusername(response.data.first_name)
+
+
+        if (response) {
             auth.login(user)
             alert("User - Verification Success")
             Navigate('/Quizstart', { replace: true })
