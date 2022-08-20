@@ -9,6 +9,34 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  background-image: url("./image/purple.jpeg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-attachment: fixed;
+
+}
+
+img{
+   /* Full height */
+   height: 100%;
+
+   /* Center and scale the image nicely */
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover; 
+}
+
+
+ html {
+  height: 100%;
+  margin: 0;
 }
 
 code {
@@ -20,7 +48,8 @@ code {
 
 .color {
   color: white;
-  background-color: lightseagreen;
+  background-color: rgb(79, 6, 79);
+ 
   text-align: center;
 
 }
@@ -28,85 +57,78 @@ code {
 .fontstyle1 {
   font-size: 65px;
   font-weight: bold;
+  color: white;
 }
 
 .fontstyle2 {
   font-size: 20px;
-  color: darkslategray;
+  color: white;
 }
 
 .fontstyle3 {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
   text-align: center;
+  color: darkblue;
 }
 
 .fontstyle4 {
-  font-size: 15px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.topgrid {
-  padding-top: 25px;
-  padding-left: 100px;
-}
-
-.SB {
   font-size: 20px;
-  padding-left: 5%;
-
-}
-
-input[type=number] {
-  margin-left: 25%;
-  width: 42%;
-  height: 5%;
-  font-size: 20px;
-}
-
-.grid {
-  padding: 50px 125px 5px 125px;
-}
-
-.grid1 {
-  padding: 50px 125px 50px 125px;
-}
-
-.cardcolor {
-  background-color: rgb(211, 211, 211);
-  height: 150px;
-}
-
-.number {
-  text-align: center;
-  padding-top: 49px;
-  font-size: 30px;
-  color: grey;
-}
-
-.number1 {
-  text-align: center;
-  padding-top: 25px;
-  font-size: 30px;
-  color: grey;
-}
-
-.Button {
   font-weight: bold;
-  padding-left: 55px;
-  padding-bottom: 50px;
-  background-color: white;
-
+  color: rgb(66, 66, 66);
+  
 }
 
-.cart {
-  margin-left: 65%;
-  width: 110px;
+
+.bgcolor{
+  background-color:rgb(92, 33, 92);
+ 
+ 
 }
 
-.cartHomeDp {
-  margin-left: 2%
+button{
+  width: 200px;
+  height: 58px ;
+  
+}
+
+.button1{
+  width: 200px;
+  height: 58px ;
+  background-color: rgb(235, 80, 243);
+  border-radius: 5px;
+}
+
+.tablebutton{
+  width: 100px;
+  height: 35px ;
+  background-color:black;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.finishbtn{
+  width: 250px;
+  height: 58px ;
+  background-color: rgb(235, 80, 243);
+  border-radius: 5px;
+}
+
+label,input{
+color: white;
+}
+
+.rowht{
+  min-height: 75px;
+}
+
+.errorrowht{
+  min-height: 25px;
+}
+
+.errors{
+color: red;
 }
 
 .Cnum {
@@ -118,243 +140,50 @@ input[type=number] {
   color: white;
 }
 
-.home {
-  padding-left: 3%;
+/* Tabel serial Number */
+
+body
+{
+    counter-reset: Serial;           /* Set the Serial counter to 0 */
 }
 
-#B1 {
-  width: 160px;
+table
+{
+    border-collapse: separate;
 }
 
-.cartHome {
-  margin-left: 85%;
-  width: 110px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+tr td:first-child:before
+{
+  counter-increment: Serial;      /* Increment the Serial counter */
+  content: counter(Serial); /* Display the counter */
 }
 
-.Cartgrid {
-  padding: 50px 125px 50px 360px;
+/* background image */
+
+.adminpage{
+  background-image: url("./image/quiz1.jpg");
+
+  /* Full height */
+ 
+    position: fixed;    top: 0;    left: 0;    right: 0;   bottom: 0;   min-width: 100%;   min-height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-attachment: fixed;
 }
 
-.CButton {
+.landingpage{
+  background-image: url("./image/dark.jpg");
 
-  font-weight: bold;
-  padding-top: 25px;
-  padding-left: 50px;
-  padding-bottom: 25px;
-  background-color: white;
-  margin-left: 35%;
-}
+  /* Full height */
+ 
+    position: fixed;    top: 0;    left: 0;    right: 0;   bottom: 0;   min-width: 100%;   min-height: 100%;
 
-.cdetails {
-  margin-left: 20px;
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 40px;
-}
-
-table {
-  text-align: center;
-}
-
-/* contact us  */
-
-.input1 {
-  margin-left: 12%
-}
-
-.input2 {
-  margin-left: 8%;
-}
-
-.input3 {
-  margin-left: 6.0%;
-}
-
-.Submitbutton {
-  margin-left: 47%;
-  margin-top: 20px;
-}
-
-label {
-  font-size: 25px;
-  margin-left: 32%;
-  display: inline-block
-}
-
-
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
-}
-
-.col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
-}
-
-.span {
-  margin-left: 32%;
-}
-
-.Cntno {
-  margin-left: 20%
-}
-
-.cntmail {
-  margin-left: 20%
-}
-
-.form {
-  margin-top: 3%;
-}
-
-.Box {
-  margin-left: 2%;
-}
-
-
-.cinputQ {
-  margin-left: 5%;
-}
-
-.cinputTA {
-  margin-left: 2%;
-}
-
-#chkoutbtn {
-  margin-left: 45%;
-  margin-top: 3%;
-}
-
-/* Razorpage */
-
-.cartHomeR {
-  margin-left: 90%;
-  display: inline-block;
-  margin-top: 2%;
-  margin-bottom: 2%;
-}
-
-.cartHomeRP {
-  margin-left: 85%;
-  display: inline-block;
-  margin-top: 2%;
-  margin-bottom: 2%;
-}
-
-.cartHomeRPP {
-  margin-left: 75%;
-  display: inline-block;
-  margin-top: 2%;
-  margin-bottom: 2%;
-}
-
-
-.cartR {
-  margin-left: 5%;
-  margin-top: 2%;
-  margin-bottom: 2%;
-}
-
-.tablerazor {
-  margin-top: 3%;
-}
-
-.pay {
-  margin-left: 50%;
-  margin-top: 3%;
-}
-
-
-#rzp-button1 {
-  margin-left: 45%;
-  margin-top: 2%;
-}
-
-
-/* login page */
-
-#loginBTNa {
-  margin-left: 43%;
-  width: 250px;
-  height: 60px;
-  margin-top: 8%
-}
-
-#loginBTNu {
-  margin-left: 43%;
-  width: 250px;
-  height: 60px;
-  margin-top: 5%
-}
-
-/* Admin page */
-
-.logoutbtn {
-  margin-left: 80%;
-  display: inline-block;
-  margin-top: 2%;
-  margin-bottom: 2%;
-}
-
-
-#AdminBTNa {
-  width: 250px;
-  height: 60px;
-  margin-top: 7%;
-  margin-left: 20%;
-}
-
-
-#AdminBTNb {
-  width: 250px;
-  height: 60px;
-  margin-top: 5%;
-  margin-left: 25%;
-}
-
-
-#AdminBTNc {
-  width: 250px;
-  height: 60px;
-  margin-top: 7%;
-  margin-left: 20%;
-}
-
-
-#AdminBTNd {
-  width: 250px;
-  height: 60px;
-  margin-top: 7%;
-  margin-left: 25%;
-}
-
-/* cartpage */
-
-.cinputFrom {
-  margin-left: 23%;
-}
-
-.cinputTo {
-  margin-left: 57%;
-}
-
-.ctextQ {
-  margin-left: 1%;
-}
-
-.p {
-  margin-left: 60%;
-  color: red;
+  /* Center and scale the image nicely */
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-attachment: fixed;
 }
