@@ -33,7 +33,7 @@ export function Dashboard() {
 
     // to store remaining question count
 
-    const [remainingcount, setremainingcount] = useState(10)
+    const [remainingcount, setremainingcount] = useState(5)
 
     // Timer
 
@@ -123,7 +123,7 @@ var auth = useAuth()
     const result = async () => {
         var response = await axios.post("http://localhost:3002/postAnswerCount", {
             correctAnswerCount: answercount,
-            questionAnswered: 10 - remainingcount
+            questionAnswered: 5 - remainingcount
         })
         Navigate("/cart")
     };

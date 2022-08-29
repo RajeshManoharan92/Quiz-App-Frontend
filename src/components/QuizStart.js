@@ -58,7 +58,7 @@ export function Quizstart() {
                     <div class="col-lg-4 col-md-6 col-sm-12 offset-lg-4 offset-md-3">
                         <div class="card">
                             <div class="card-body">
-                                <p class="card-text">1. You have 10 questions to answer</p>
+                                <p class="card-text">1. You have 5 questions to answer</p>
                                 <p class="card-text">2. Each question has 3 options</p>
                                 <p class="card-text">3. You have 30 seconds to answer a question</p>
                                 <p class="card-text">4. By default after 30 seconds automatically it move to next question</p>
